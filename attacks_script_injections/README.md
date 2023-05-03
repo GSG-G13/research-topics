@@ -1,5 +1,5 @@
 <h1 align="center">
-  Cyberattacks and Injections 😈
+  Cyberattacks and Injections 🕵🏿‍♂️
 </h1>
 
 ### Want to hack like Mr. Robot? Sorry, we're not offering a course on how to break the law today. But stick with us and we'll show you how to keep your own application secure!
@@ -43,3 +43,7 @@ To defend against CSRF attacks, you can implement the following measures:
 ## Conclusion
 
 XSS and CSRF attacks are serious threats to web applications and can cause significant damage. By implementing the measures mentioned above, you can defend against these attacks and ensure the security of your web applications.
+
+# Sql injection
+
+#### SQL Injection attacks (or SQLi) alter SQL queries, injecting malicious code by exploiting application vulnerabilities.Successful SQLi attacks allow attackers to modify database information, access sensitive data, execute admin tasks on the database, and recover files from the system. In some cases attackers can issue commands to the underlying database operating system.
