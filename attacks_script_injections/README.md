@@ -1,4 +1,13 @@
-# Attacks
+<h1 align="center">
+  Cyberattacks and Injections 😈
+</h1>
+
+### Want to hack like Mr. Robot? Sorry, we're not offering a course on how to break the law today. But stick with us and we'll show you how to keep your own application secure!
+
+<p align="center"> 
+<img src="./images/mr-robot.gif">
+</p>
+
 - What are the following types of attack?
   - Man In The Middle (MITM)
   - Cross Site Scripting (XSS)
@@ -6,6 +15,7 @@
 - How can you defend against each of them?
 
 ## Script injections / safety issues
+
 - What is a script injection and how do these happen?
 - How would you prevent script injections?
 - What is the Parameterized query?
