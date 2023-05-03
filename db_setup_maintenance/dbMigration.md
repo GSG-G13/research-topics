@@ -10,13 +10,13 @@
 * This is more relevant to relational databases
 > * It’s also mostly why people decide to go the NoSQL route. Schema changes are hard!
 
-
 ### Why Do We Migrate?🤔
 
 * Data is state. Must be extra careful with any schema mutations.
 * Used to take down web apps for maintenance. Not anymore.
 * Online schema changes mean your code talks to multiple schema versions at the same time.
-          ![](https://i.imgur.com/zoSbBo8.png)
+
+  ![](https://i.imgur.com/zoSbBo8.png)
 
 ## Manual Live Schema Changes
 * Manual live schema changes in production is a recipe for disaster.
