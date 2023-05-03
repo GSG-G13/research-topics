@@ -16,15 +16,25 @@ CREATE TABLE customers (
   name VARCHAR(25) NOT NULL,
   email VARCHAR(30) NOT NULL,
   password VARCHAR(25) NOT NULL
-);```
+); 
+```
 ```js
 INSERT INTO customers (name, email, phone)
-VALUES ('John Smith', 'john@example.com', '555-1234');```.
+VALUES ('John Smith', 'john@example.com', '555-1234');
+```
 
-```SELECT * FROM customers;```
+```js 
+SELECT * FROM customers;
+```
 
-```SELECT * FROM customers WHERE name = 'John Smith';```
+```js
+SELECT * FROM customers WHERE name = 'John Smith';
+```
 
-```UPDATE customers SET phone = '555-5678' WHERE id = 1;```
+```js
+UPDATE customers SET phone = '555-5678' WHERE id = 1;
+```
 
-```DELETE FROM customers WHERE id = 2;```
+``` js
+DELETE FROM customers WHERE id = 2;
+```
