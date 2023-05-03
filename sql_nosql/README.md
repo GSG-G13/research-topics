@@ -14,7 +14,7 @@ Here's an example of some basic SQL code:
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY,
   name VARCHAR(25) NOT NULL,
-  email VARCHAR(30) NOT NULL,
+  email VARCHAR(30),
   password VARCHAR(25) NOT NULL
 ); 
 CREATE TABLE orders (
