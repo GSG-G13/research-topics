@@ -15,3 +15,17 @@ Database schema is the description of database, specifies how data is arranged i
 
 ### When we need database schema 🤔
 A database schema is used when you are designing or developing a relational database. It's an essential component of the database development process because it defines the structure, organization, and relationships of the data within the database.
+
+## Database Relationships 🔗
+
+Relationships are meaningful associations between tables that contain related information, they’re what make databases useful.
+
+### Types of Relationships
+
+- One-to-one
+
+  ![One-to-one](./images/one-to-one.gif)
+
+- One-to-many
+
+  ![One-to-many](./images/one-to-many.gif)
