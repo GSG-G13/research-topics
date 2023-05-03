@@ -12,3 +12,6 @@ Database schema is the description of database, specifies how data is arranged i
 - Data consistency and accuracy: By defining the data types and constraints within the schema, you can ensure that the data stored in the database is consistent and accurate. This reduces the risk of errors and inconsistencies in the data.
 
 - Data integrity: The schema can define relationships between tables and enforce constraints on the data. This ensures that the data in the database is reliable and consistent.
+
+### When we need database schema 🤔
+- A database schema is used when you are designing or developing a relational database. It's an essential component of the database development process because it defines the structure, organization, and relationships of the data within the database.
