@@ -1,5 +1,6 @@
 <h1 align="center" style="font-size:32px">
-  Cyberattacks and Injections 
+  👾Cyberattacks and Injections 
+  👾
 </h1>
 
 ### Want to hack like Mr. Robot? Sorry, we're not offering a course on how to break the law today. But stick with us and we'll show you how to keep your own application secure!
@@ -10,7 +11,7 @@
 <img src="./images/mr-robot.gif" width="300px" height="200px">
 </p>
 
-### In the world of cybersecurity, attacks can be broadly categorized into two main types:active attacks and passive attacks.
+### 👨‍💻 In the world of cybersecurity, attacks can be broadly categorized into two main types: active attacks and passive attacks
 
 <br>
 <br>
@@ -51,7 +52,7 @@
 
 <br>
 
-# Man-In-The-Middle (MITM) attacks
+# 🕵🏿‍♂️ Man-In-The-Middle (MITM) attacks
 
 #### A man-in-the-middle (MitM) attack is a type of cyberattack in which communications between two parties is intercepted, often to steal login credentials or personal information, spy on victims, sabotage communications, or corrupt data.
 
@@ -61,7 +62,7 @@ the attackers aim to convince the router and user that they are each other,allaw
 
 <br>
 
-### Man-in-the-middle attack prevention
+### **Defending Against Man in the middle Attacks**
 
 - Avoid public Wi-Fi networks, which are often insecure and easily compromised.
 - Keep software up-to-date to patch known vulnerabilities.
@@ -70,7 +71,7 @@ the attackers aim to convince the router and user that they are each other,allaw
 
 <br>
 
-# Cross-Site Scripting (XSS) Attacks
+# ⚠️ Cross-Site Scripting (XSS) Attacks
 
 XSS attacks are a type of injection attack where an attacker injects malicious code into a web page that is viewed by other users. This can happen when a web application fails to sanitize user input properly or when it does not validate user input correctly.
 
@@ -80,15 +81,13 @@ In a reflected XSS attack, the malicious code is reflected back to the user from
 
 #
 
-<img src="https://sectigostore.com/blog/wp-content/uploads/2020/05/reflected-xss-attack-1536x720.png" />
+<!-- <img src="https://sectigostore.com/blog/wp-content/uploads/2020/05/reflected-xss-attack-1536x720.png" /> -->
 
 In a stored XSS attack, the malicious code is stored on the server and served to every user who requests the affected page.
 
 <img src="https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/sorted-XSS.png" />
 
-### Defending Against XSS Attacks
-
-To defend against XSS attacks, you can implement the following measures:
+### **Defending Against XSS Attacks**
 
 - Sanitize user input: Ensure that user input is properly sanitized before it is stored in the database or displayed on a web page.
 - Validate user input: Validate user input to ensure that it conforms to expected formats.
@@ -96,22 +95,55 @@ To defend against XSS attacks, you can implement the following measures:
 
 <br>
 
-# Cross-Site Request Forgery (CSRF) Attacks
+# ❌ Cross-Site Request Forgery (CSRF) Attacks
 
 CSRF attacks are a type of attack where an attacker sends a request from a victim's browser to a web application without the victim's knowledge or consent. This can happen when a web application does not properly validate requests.
 
-### Defending Against CSRF Attacks
-
-To defend against CSRF attacks, you can implement the following measures:
+### **Defending Against CSRF Attacks**
 
 - Use CSRF tokens: Implement CSRF tokens in web forms to ensure that the request is coming from a legitimate source.
 - Use the SameSite attribute: Set the SameSite attribute on cookies to prevent them from being sent in cross-site requests.
 - Use the X-Frame-Options header: Implement the X-Frame-Options header to prevent clickjacking attacks.
 
-## Conclusion
+<br>
 
-XSS and CSRF attacks are serious threats to web applications and can cause significant damage. By implementing the measures mentioned above, you can defend against these attacks and ensure the security of your web applications.
+# 💉 Sql injection
 
-# Sql injection
+#### SQL Injection attacks (or SQLi) alter SQL queries, injecting malicious code by exploiting application vulnerabilities. Successful SQLi attacks allow attackers to modify database information, access sensitive data, execute admin tasks on the database, and recover files from the system. In some cases attackers can issue commands to the underlying database operating system.
 
-#### SQL Injection attacks (or SQLi) alter SQL queries, injecting malicious code by exploiting application vulnerabilities.Successful SQLi attacks allow attackers to modify database information, access sensitive data, execute admin tasks on the database, and recover files from the system. In some cases attackers can issue commands to the underlying database operating system.
+<br>
+
+#### **SQLi attacks can also be classified by the method they use to inject data:**
+
+- SQL injection based on user input.
+- SQL injection based on cookies.
+- SQL injection based on HTTP headers.
+
+<br>
+
+**Defending Against SQL injections**
+
+- Use of parameterized Queries
+- Allow-list Input Validation
+
+<br>
+
+# 🤝Contributors:
+
+[Eman Alabsi](https://github.com/Emanalabsi)
+
+[Aya Qunoo](https://github.com/AyaQunoo)
+
+[Momen Qudaih](https://github.com/momenqudaih)
+
+<br>
+
+# 📄Resources:
+
+https://brightsec.com/blog/sql-injection-attack
+
+https://www.cisco.com/c/en/us/products/security/common-cyberattacks.html#~types-of-cyber-attacks
+
+https://www.csoonline.com/article/3340117/man-in-the-middle-attack-definition-and-examples.html
+
+https://www.youtube.com/@davidbombal
