@@ -1,0 +1,13 @@
+# G13 Research 
+1. [Schemas and relationships](./schema_relationships/README.md)
+2. [SQL vs NoSQL database](./sql_nosql/README.md)
+3. [Mongo](./mongo/README.md)
+4. [Sequelize](./sequelize/README.md)
+5. [Database setup and maintenance ](./db_setup_maintenance/README.md)
+6. [Attacks Script injections / safety issues](./attacks_script_injections/README.md)
+7. [Transactions in SQL Server ](./sql_transactions/README.md)
+8. [Modify schema of production sql database](./sql_modify_schema/README.md)
+9. [HTTP vs HTTPS](./http_https/README.md)
+10. [Stateless vs stateful authentication](./statefull_stateless_auth/README.md)
+11. [Session-management in Express](./session_management/README.md)
+12. [OAuth](./oauth/README.md)
