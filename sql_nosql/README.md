@@ -50,3 +50,17 @@ DELETE FROM customers WHERE id = 2;
 - Usage:
   SQL databases are commonly used for structured data with complex relationships, such as financial data or inventory management systems.
 #### Overall, SQL databases are better suited for handling structured data and complex queries, while NoSQL ----However, the choice between SQL and NoSQL ultimately depends on the specific needs and requirements of the project at hand.
+
+## Advantages of SQL:
+
+- Standardized: SQL is a standardized language, meaning that it can be used across different database management systems.
+- Data Integrity: SQL databases are designed to ensure data integrity through the use of constraints and rules.
+- Query Flexibility: SQL offers a high degree of query flexibility, allowing users to retrieve and manipulate data in various ways.
+- ACID Transactions: SQL databases support ACID transactions, ensuring that database operations are completed reliably and consistently.
+- Relational: SQL databases are relational, meaning that they can handle complex relationships between data.
+
+## Disadvantages of SQL:
+
+- Complexity: SQL databases can be complex to set up and maintain, requiring specialized knowledge and skills.
+- Limited Scalability: SQL databases are vertically scalable, meaning that they require more powerful hardware to handle larger amounts of data and traffic.
+- Rigid Schema: SQL databases use a rigid schema, meaning that the structure of the database must be defined before data can be inserted.
