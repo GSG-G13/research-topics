@@ -8,6 +8,12 @@ SQL is like a well-behaved student who always follows the rules, while NoSQL is 
 
 - The main difference between SQL and other programming languages is that SQL is specifically designed for working with databases, while other programming languages such as Python, Java, or JavaScript are designed for general-purpose programming tasks. SQL is used in combination with a variety of database management systems such as MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.
 
+### Disadvantages of NoSQL:
+
+- Lack of standardization: NoSQL databases often lack standardization in terms of syntax and commands, making it challenging to switch between different databases.
+- Limited query functionality: NoSQL databases have limited query functionality compared to SQL databases, making it difficult to retrieve and manipulate data in various ways.
+- Eventual consistency: Some NoSQL databases sacrifice consistency in favor of availability and partition tolerance, meaning that data may not be immediately consistent across all nodes in the database.
+
 Here's an example of some basic SQL code:
 ```js
 CREATE TABLE customers (
@@ -43,6 +49,8 @@ UPDATE customers SET phone = '555-5678' WHERE id = 1;
 ``` js
 DELETE FROM customers WHERE id = 2;
 ```
+---
+
 
 ## NoSQL
 - it's (short for "not only SQL") is a type of database that provides a flexible and dynamic approach to data storage and retrieval. Unlike traditional SQL databases, NoSQL databases do not enforce a fixed schema or rely on complex joins to relate data between tables. Instead, NoSQL databases store data in a variety of formats, such as key-value pairs, documents, graphs, or columns.
