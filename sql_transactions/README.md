@@ -78,7 +78,10 @@ The common transaction states in a DBMS are:
 
 ***what happens if an ATM machine malfunctions or the power goes out during a withdrawal, deposit, or transfer transaction?🤔***
 
-<img src ="https://media.istockphoto.com/id/1281693485/photo/person-entering-pin-code-using-atm-bank-machine-to-withdraw-money-close-up.jpg?s=612x612&w=0&k=20&c=wnB7jVQ1D5cgPIV2nu8E61O1rBBCWJCaxSf5vlSzqpY=">
+<div style="display:flex; justify-content:center;">
+  <img src="https://media.istockphoto.com/id/1281693485/photo/person-entering-pin-code-using-atm-bank-machine-to-withdraw-money-close-up.jpg?s=612x612&w=0&k=20&c=wnB7jVQ1D5cgPIV2nu8E61O1rBBCWJCaxSf5vlSzqpY=" />
+</div>
+
 
 If an error occurs, the ATM will stop and issue a message to the user indicating that an error has occurred. In some cases, the received funds may be returned to the customer upon reboot.
 
@@ -94,9 +97,3 @@ Aya Aljalees
 
 Farah Halimi.
 
-<style>
-  img {
-    position: relative;
-    left:30%;
-  }
-</style>
