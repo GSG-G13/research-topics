@@ -38,3 +38,32 @@
 - Imagine a banking application that needs to maintain session state for each client. In this scenario, stateful authentication can be beneficial as it allows the application to maintain a consistent view of the client's session across multiple requests. This allows the application to implement features such as transaction history and fraud detection by analyzing the user's behavior over time.
 
 - Consider an e-commerce application that requires users to maintain a persistent shopping cart across multiple sessions. Stateful authentication can be beneficial in this scenario as it allows the application to store the user's shopping cart information in a centralized session store, making it accessible across multiple devices and sessions. This allows the user to pick up where they left off regardless of which device they're using to access the application
+
+
+// last section in workshop
+
+# Hybrid Approaches to Authentication: Combining the Benefits of Stateless and Stateful Authentication:
+
+***Stateful authentication and stateless authentication have their respective strengths and weaknesses. Stateful authentication is known for its higher level of security, as it can track user sessions and prevent unauthorized access. On the other hand, stateless authentication is faster and more scalable, making it well-suited for handling individual requests. A hybrid approach that combines both techniques can deliver the best of both worlds, providing strong security while also accommodating scalability and speed.***
+
+- Fortunately, authentication is not a zero-sum game. Developers can build a hybrid approach of stateful and stateless authentication that is both fast and secure.
+
+- The magic comes from a simple sleight-of-hand: instead of setting stateless tokens to expire with the session, they can be set with a short expiration and refreshed periodically.
+
+- When a token is refreshed, the database is checked to ensure the session is still active. As a result, sessions can still be revoked before they end. The potential delay before revocation completes depends on how frequently tokens must be refreshed. If a 60 second expiration is assigned to each token, then revocation will take a maximum of 60 seconds.
+
+- Refreshing stateless tokens is a stateful process, since it requires querying the database to confirm the session is still active. But with the optimal approach, refreshes will happen asynchronously, except for the very first load after an application is closed.
+
+- In practice
+Clerk changed to a hybrid approach for session management 6 months ago. The functionality is built-in to our SDKs without any configuration, so most developers don't even recognize it's happening.
+
+- Our stateless authentication tokens are set to expire every 60 seconds. In practice, here's how it works:
+
+- When a user signs in, a stateless authentication token is created immediately.
+An asynchronous poller is started on the frontend to refresh the stateless token every 50 seconds. The 10 second difference is to account for potential network delays and clock-skew between our token generator and the developer's backend.
+While the user is active on the application, every request to the developer's backend will include an active, stateless authentication token.
+But now, let's say the user closes the application for a few minutes so our poller stops. When the user revisits the application, the latest token has already expired since 60 seconds have elapsed.
+
+- In this case, we need to update the token synchronously before requests to the backend can be processed. It's the one exception to an otherwise completely stateless authentication experience.
+
+- In the end, Clerk's authentication solution is both stateful and stateless. Sessions can be revoked within 60 seconds, yet the vast majority of requests use stateless authentication and can be verified in under 1ms***
