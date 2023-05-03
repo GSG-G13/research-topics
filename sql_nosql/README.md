@@ -55,7 +55,7 @@ DELETE FROM customers WHERE id = 2;
 ## NoSQL
 - it's (short for "not only SQL") is a type of database that provides a flexible and dynamic approach to data storage and retrieval. Unlike traditional SQL databases, NoSQL databases do not enforce a fixed schema or rely on complex joins to relate data between tables. Instead, NoSQL databases store data in a variety of formats, such as key-value pairs, documents, graphs, or columns.
 
-## Disadvantages of NoSQL:
+### Disadvantages of NoSQL:
 - Lack of standardization, with each database system using its own query language and APIs
 - May sacrifice data consistency for scalability, as some NoSQL databases offer eventual consistency rather than ACID transactions
 - Not as suited for structured data with complex relationships as SQL databases.
