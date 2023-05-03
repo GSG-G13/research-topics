@@ -60,6 +60,8 @@ DELETE FROM customers WHERE id = 2;
 - May sacrifice data consistency for scalability, as some NoSQL databases offer eventual consistency rather than ACID transactions
 - Not as suited for structured data with complex relationships as SQL databases.
 
+## When to Use Each and Why
+- SQL databases are typically a good choice when the data is structured and the relationships between different pieces of data are well-defined. For example, SQL databases are commonly used for transactional systems, where data consistency and integrity are critical. NoSQL databases, on the other hand, are a good choice when the data is unstructured or semi-structured and the schema may change frequently. NoSQL databases are also well-suited for large-scale, high-availability systems that require low-latency access to data, such as real-time analytics or content delivery networks.
 ### Them main differences 
 
 |             | SQL                                          | NoSQL                                                                |
