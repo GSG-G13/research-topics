@@ -38,3 +38,15 @@ UPDATE customers SET phone = '555-5678' WHERE id = 1;
 ``` js
 DELETE FROM customers WHERE id = 2;
 ```
+## The main differences
+- Data Structure:
+ SQL databases use tables with rows and columns to store data in a structured format.
+- Scalability:
+ SQL databases are vertically scalable, meaning that they require more powerful hardware to handle larger amounts of data and traffic.
+- Schema:
+ SQL databases use a rigid schema, meaning that the structure of the database must be defined before data can be inserted.
+- Transactions:
+ SQL databases support ACID (Atomicity, Consistency, Isolation, and Durability) transactions, which ensure that database operations are completed reliably and consistently.
+- Usage:
+  SQL databases are commonly used for structured data with complex relationships, such as financial data or inventory management systems.
+#### Overall, SQL databases are better suited for handling structured data and complex queries, while NoSQL ----However, the choice between SQL and NoSQL ultimately depends on the specific needs and requirements of the project at hand.
