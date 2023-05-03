@@ -5,3 +5,5 @@
 
 ## Database Schema
 Database schema is the description of database, specifies how data is arranged in a relational database, including logical constraints such as table names, fields, data types, and the relationships between these entities.
+
+### why we need database schema?
