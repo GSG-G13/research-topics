@@ -8,11 +8,11 @@ SQL is like a well-behaved student who always follows the rules, while NoSQL is 
 
 - The main difference between SQL and other programming languages is that SQL is specifically designed for working with databases, while other programming languages such as Python, Java, or JavaScript are designed for general-purpose programming tasks. SQL is used in combination with a variety of database management systems such as MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.
 
-### Disadvantages of NoSQL:
+### Disadvantages of SQL:
 
-- Lack of standardization: NoSQL databases often lack standardization in terms of syntax and commands, making it challenging to switch between different databases.
-- Limited query functionality: NoSQL databases have limited query functionality compared to SQL databases, making it difficult to retrieve and manipulate data in various ways.
-- Eventual consistency: Some NoSQL databases sacrifice consistency in favor of availability and partition tolerance, meaning that data may not be immediately consistent across all nodes in the database.
+- Complexity: SQL databases can be complex to set up and maintain, requiring specialized knowledge and skills.
+- Limited Scalability: SQL databases are vertically scalable, meaning that they require more powerful hardware to handle larger amounts of data and traffic.
+- Rigid Schema: SQL databases use a rigid schema, meaning that the structure of the database must be defined before data can be inserted.
 
 Here's an example of some basic SQL code:
 ```js
@@ -60,9 +60,21 @@ DELETE FROM customers WHERE id = 2;
 - May sacrifice data consistency for scalability, as some NoSQL databases offer eventual consistency rather than ACID transactions
 - Not as suited for structured data with complex relationships as SQL databases.
 
-## When to Use Each and Why
-- SQL databases are typically a good choice when the data is structured and the relationships between different pieces of data are well-defined. For example, SQL databases are commonly used for transactional systems, where data consistency and integrity are critical. NoSQL databases, on the other hand, are a good choice when the data is unstructured or semi-structured and the schema may change frequently. NoSQL databases are also well-suited for large-scale, high-availability systems that require low-latency access to data, such as real-time analytics or content delivery networks.
-### Them main differences 
+### Here's an example of some basic SQL code:
+```sql
+db.createCollection("collection_name")
+```
+```sql
+db.collection.insertOne({ name: "John", age: 30, city: "New York" })
+```
+```sql
+db.collection_name.find()
+```
+```sql
+db.collection_name.find({ field: value })
+```
+
+### Them main differences
 
 |             | SQL                                          | NoSQL                                                                |
 |-------------|----------------------------------------------|----------------------------------------------------------------------|
@@ -73,4 +85,7 @@ DELETE FROM customers WHERE id = 2;
 
 
 #### Overall, SQL databases are better suited for handling structured data and complex queries, while NoSQL databases are better suited for handling unstructured or semi-structured data with fewer relationships. However, the choice between SQL and NoSQL ultimately depends on the specific needs and requirements of the project at hand, such as the amount and complexity of data, the required level of scalability, the need for ACID transactions, and the development team's familiarity with either technology.
+
+## When to Use Each and Why
+- SQL databases are typically a good choice when the data is structured and the relationships between different pieces of data are well-defined. For example, SQL databases are commonly used for transactional systems, where data consistency and integrity are critical. NoSQL databases, on the other hand, are a good choice when the data is unstructured or semi-structured and the schema may change frequently. NoSQL databases are also well-suited for large-scale, high-availability systems that require low-latency access to data, such as real-time analytics or content delivery networks.
 
