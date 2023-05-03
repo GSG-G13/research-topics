@@ -21,7 +21,19 @@ Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF) attacks are two
 
 XSS attacks are a type of injection attack where an attacker injects malicious code into a web page that is viewed by other users. This can happen when a web application fails to sanitize user input properly or when it does not validate user input correctly.
 
-XSS attacks can be either stored or reflected. In a stored XSS attack, the malicious code is stored on the server and served to every user who requests the affected page. In a reflected XSS attack, the malicious code is reflected back to the user from the server in response to a request.
+XSS attacks can be either stored or reflected. 
+
+In a reflected XSS attack, the malicious code is reflected back to the user from the server in response to a request.
+#
+
+<img src="https://sectigostore.com/blog/wp-content/uploads/2020/05/reflected-xss-attack-1536x720.png" />
+
+
+In a stored XSS attack, the malicious code is stored on the server and served to every user who requests the affected page. 
+
+
+<img src="https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/sorted-XSS.png" />
+
 
 ### Defending Against XSS Attacks
 
