@@ -17,6 +17,12 @@ CREATE TABLE customers (
   email VARCHAR(30) NOT NULL,
   password VARCHAR(25) NOT NULL
 ); 
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  customer_id INTEGER NOT NULL,
+  order_date DATE NOT NULL,
+  total_amount DECIMAL(10,2) NOT NULL
+);
 ```
 ```js
 INSERT INTO customers (name, email, phone)
