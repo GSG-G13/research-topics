@@ -13,7 +13,7 @@ is a group of commands that change the data stored in database, is treated as a 
 ---
 
 ✍️ 
-# Note : 
+#### Note : 
 
 - ( BEGIN --- COMMIT) => each statment inside this block is excuted in the same transaction, cannot be commited or rollback indiviudal.
 
@@ -56,7 +56,7 @@ The common transaction states in a DBMS are:
 
 - Terminated State: This is the final state of a transaction. It occurs when a transaction is either committed or aborted and all the resources used by the transaction are released.
 
-# Note :
+#### Note :
  not all DBMSs use the same terminology for transaction states and some may have additional or different states. 
 
 ## Transaction boundaries :
@@ -71,7 +71,7 @@ The common transaction states in a DBMS are:
 
  * The ROLLBACK TRANSACTION: statement is used to cancel the changes made during the transaction.
 
-# Note:
+#### Note:
  - Transactions should be used carefully and with consideration, as they can impact database performance and concurrency.
 
  - Transactions should be properly scoped and committed or rolled back in a timely manner to avoid holding locks on database resources for extended periods of time.
