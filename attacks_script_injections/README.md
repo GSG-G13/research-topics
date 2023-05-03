@@ -1,16 +1,25 @@
-# Attacks
-- What are the following types of attack?
-  - Man In The Middle (MITM)
-  - Cross Site Scripting (XSS)
-  - Cross Site Request Forgery (CSRF)
-- How can you defend against each of them?
+In the world of cybersecurity, attacks can be broadly categorized into two main types:active attacks and passive attacks.
+<table>
+  <tr>
+    <th>Passive Attacks</th>
+    <th>Active Attacks</th>
+  </tr>
+  <tr>
+    <td>attempts to make use of information from the system</td>
+    <td>involve some modification of the data streams</td>
 
-## Script injections / safety issues
-- What is a script injection and how do these happen?
-- How would you prevent script injections?
-- What is the Parameterized query?
-- Prepare a short demonstration of good (and bad?) practices, including some sample code
+  </tr>
+  <tr>
+    <td>Does not effect system resources</td>
+    <td>system resources can be changed</td>
 
+  </tr>
+   <tr>
+    <td>Does not effect system resources</td>
+    <td>system resources can be changed</td>
+
+  </tr>
+</table>
 # Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF) Attacks
 
 ## Introduction
@@ -46,3 +55,4 @@ To defend against CSRF attacks, you can implement the following measures:
 ## Conclusion
 
 XSS and CSRF attacks are serious threats to web applications and can cause significant damage. By implementing the measures mentioned above, you can defend against these attacks and ensure the security of your web applications.
+
