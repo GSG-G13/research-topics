@@ -39,7 +39,6 @@ Basically anytime you have a unit of work that is either sensetive to outside ch
 
 
  ## Transaction State :
-
 Transaction states refer to the different stages or phases that a transaction goes through during its lifetime in a DBMS. Each state represents a different stage of the transaction and is determined by the outcome of the previous stage.
 
 The common transaction states in a DBMS are:
@@ -56,6 +55,9 @@ The common transaction states in a DBMS are:
 
 - Terminated State: This is the final state of a transaction. It occurs when a transaction is either committed or aborted and all the resources used by the transaction are released.
 
+<img src ="https://scaler.com/topics/images/Transaction-State-of-Acid-properties-in-DBMS-1024x583.jpeg">
+
+
 #### Note :
  not all DBMSs use the same terminology for transaction states and some may have additional or different states. 
 
@@ -63,9 +65,10 @@ The common transaction states in a DBMS are:
  To specify the boundaries of a transaction, you can use the BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION statements.
  
  * The BEGIN TRANSACTION: statement marks the beginning of a transaction in Transact-SQL.
-   -All subsequent database operations within that transaction will be treated as a single unit of   work that can be committed or rolled back as a whole.
+
+     -All subsequent database operations within that transaction will be treated as a single unit of   work that can be committed or rolled back as a whole.
  
-   -The modifications made during the transaction are held in a temporary state until the transaction is committed or rolled back.
+     -The modifications made during the transaction are held in a temporary state until the transaction is committed or rolled back.
 
  * The COMMIT TRANSACTION: statement is used to commit the transaction and make the changes permanent. 
 
@@ -77,11 +80,6 @@ The common transaction states in a DBMS are:
  - Transactions should be properly scoped and committed or rolled back in a timely manner to avoid holding locks on database resources for extended periods of time.
 
 ***what happens if an ATM machine malfunctions or the power goes out during a withdrawal, deposit, or transfer transaction?🤔***
-
-<div style="display:flex; justify-content:center;">
-  <img src="https://media.istockphoto.com/id/1281693485/photo/person-entering-pin-code-using-atm-bank-machine-to-withdraw-money-close-up.jpg?s=612x612&w=0&k=20&c=wnB7jVQ1D5cgPIV2nu8E61O1rBBCWJCaxSf5vlSzqpY=" />
-</div>
-
 
 If an error occurs, the ATM will stop and issue a message to the user indicating that an error has occurred. In some cases, the received funds may be returned to the customer upon reboot.
 
