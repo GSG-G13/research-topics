@@ -43,18 +43,6 @@ UPDATE customers SET phone = '555-5678' WHERE id = 1;
 ``` js
 DELETE FROM customers WHERE id = 2;
 ```
-### The main differences
-- Data Structure:
- SQL databases use tables with rows and columns to store data in a structured format.
-- Scalability:
- SQL databases are vertically scalable, meaning that they require more powerful hardware to handle larger amounts of data and traffic.
-- Schema:
- SQL databases use a rigid schema, meaning that the structure of the database must be defined before data can be inserted.
-- Transactions:
- SQL databases support ACID (Atomicity, Consistency, Isolation, and Durability) transactions, which ensure that database operations are completed reliably and consistently.
-- Usage:
-  SQL databases are commonly used for structured data with complex relationships, such as financial data or inventory management systems.
-#### Overall, SQL databases are better suited for handling structured data and complex queries, while NoSQL ----However, the choice between SQL and NoSQL ultimately depends on the specific needs and requirements of the project at hand.
 
 ### Advantages of SQL:
 
@@ -72,3 +60,15 @@ DELETE FROM customers WHERE id = 2;
 ---
 ## NoSQL
 - it's (short for "not only SQL") is a type of database that provides a flexible and dynamic approach to data storage and retrieval. Unlike traditional SQL databases, NoSQL databases do not enforce a fixed schema or rely on complex joins to relate data between tables. Instead, NoSQL databases store data in a variety of formats, such as key-value pairs, documents, graphs, or columns.
+
+### Them main differences 
+
+|             | SQL                                          | NoSQL                                                                |
+|-------------|----------------------------------------------|----------------------------------------------------------------------|
+| Data structure | Tables with rows and columns                   | Flexible and dynamic, including key-value, document, column, and graph databases |
+| Scalability    | Vertically scalable                              | Horizontally scalable                                                 |
+| Schema         | Rigid schema                                      | Dynamic schema that allows for data to be inserted without predefined structure |
+| Usage          | Structured data with complex relationships | Unstructured or semi-structured data with less complex relationships, such as social media posts, logs, or IoT sensor data |
+
+
+##### Overall, SQL databases are better suited for handling structured data and complex queries, while NoSQL databases are better suited for handling unstructured or semi-structured data with fewer relationships. However, the choice between SQL and NoSQL ultimately depends on the specific needs and requirements of the project at hand, such as the amount and complexity of data, the required level of scalability, the need for ACID transactions, and the development team's familiarity with either technology.
