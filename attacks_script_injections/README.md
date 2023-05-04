@@ -81,7 +81,7 @@ In a reflected XSS attack, the malicious code is reflected back to the user from
 
 #
 
-<!-- <img src="https://sectigostore.com/blog/wp-content/uploads/2020/05/reflected-xss-attack-1536x720.png" /> -->
+<img src="https://www.hackingloops.com/wp-content/uploads/2015/06/reflected-cross-site-scripting.jpg" />
 
 In a stored XSS attack, the malicious code is stored on the server and served to every user who requests the affected page.
 
