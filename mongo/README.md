@@ -5,6 +5,9 @@ A database is a structured collection of data stored in a computer system. It en
 
 ## **Types Of Databases:**
 ![](https://i.imgur.com/EcJsOnp.png)
+---
+![](https://i.imgur.com/4Sk7Ltk.jpg)
+
 
 **SQL Database (Structured Query Language):** 
 * is a programming language that is used to manage data in relational databases. 
@@ -33,6 +36,7 @@ db.employee.insert({
 ```
 
 ## **Commen Defenitions**
+![](https://i.imgur.com/DMN9tQA.png)
 
 **Collection:** A grouping of documents inside of a database. This is the same as a table in SQL and usually each type of data (users, posts, products) will have its own 
 collection.
@@ -90,11 +94,6 @@ A Mongoose schema is a configuration object that defines the structure and valid
 **min:** Number, creates a validator that checks if the value is greater than or equal to the given minimum.
     
 **max:** Number, creates a validator that checks if the value is less than or equal to the given maximum.
-
-
-
-## **Sub Documents**
-Subdocuments in Mongoose are nested documents within other documents in a MongoDB collection. They are defined as part of a schema, allowing you to create hierarchical structures and relationships between documents. They are useful for organizing data and avoiding repetition.
     
 ## **Example**
 ```javascript
@@ -150,6 +149,8 @@ const userSchema = new mongoose.Schema({
   address: addressSchema
 })
 ```
+## **Sub Documents**
+Subdocuments in Mongoose are nested documents within other documents in a MongoDB collection. They are defined as part of a schema, allowing you to create hierarchical structures and relationships between documents. They are useful for organizing data and avoiding repetition.
     
 ## **Mongoose Model**
 * A wrapper around a MongoDB collection that allows you to interact with the data in that collection.
@@ -163,56 +164,58 @@ mongoose.model('users', userSchema);
 ## **Mongoose Queries**
     
 ### **Create Queries**
-**insertOne:** Create a new document inside the specified collection.
+**create:** Create a new document inside the specified collection.
     
 ```javascript
-db.users.insertOne({ name: 'Alaa' })
+const user = new User({ name: 'Alaa' })
+user.save()
 ```
- 
-**insertMany:** Create multi new documents inside a specific collection.
     
 ```javascript
-db.users.insertMany([{ age: 26 }, { age: 20 }])
+mongoose.collection.create({ name: 'Ahmed' })
 ```
 
 ### **Read Queries**
 **find:** Get all documents.
     
 ```javascript
-db.users.find()
+mongoose.collection.find()
 ```
     
 **find(<filterObject>):** Find all documents that match the filter object.
     
 ```javascript
-db.users.find({ 'address.street': '123 Main St' })
+mongoose.collection.find({ 'address.street': '123 Main St' })
 ```
     
 **findOne:** The same as find, but only return the first document that matches the filter object.
 
 ```javascript
-db.users.findOne({ name: 'Ahmed' })
+mongoose.collection.findOne({ name: 'Alaa' })
 ```
 
 **where:** construct queries for searching documents that match a certain criteria.
     
+```javascript
+mongoose.collection.where()
+``` 
     
 **equals:** is used to compare the value of a field in a Mongoose document with a provided value.
 
 ```javascript
-db.users.where('name').equals('Ahmed')
+mongoose.collection.where('name').equals('Ahmed')
 ```
     
 **select:** return specifies field from a document.
 
 ```javascript
-db.users.where('name').equals('Ahmed').select([ 'userName', 'age', 'createdAt'])
+mongoose.collection.where('name').equals('Ahmed').select([ 'userName', 'age', 'createdAt'])
 ```
 
 **populate:** is a method used to fill in document references by performing a join with another collection.
 
 ```javascript
-db.users.where('name').equals('Ahmed').select([ 'userName', 'age', 'bestFriend']).populate('bestFriend')
+mongoose.collection.where('name').equals('Ahmed').select([ 'userName', 'age', 'bestFriend']).populate('bestFriend')
 ```
     
 ### **Update Queries**
@@ -220,13 +223,13 @@ db.users.where('name').equals('Ahmed').select([ 'userName', 'age', 'bestFriend']
 **updateOne:** Update the first document that matches the filter object with the data passed into the second parameter which is the update object.
     
 ```javascript
-db.users.updateOne({ age: 20 }, { $set: { age: 21 } })
+mongoose.collection.updateOne({ age: 20 }, { $set: { age: 21 } })
 ```
     
 **updateMany:** Update all documents that matches the filter object with the data passed into the second parameter which is the update object.
     
 ```javascript
-db.users.updateOne({ age: 20 }, { $set: { age: 21 } })
+mongoose.collection.updateMany({ age: 20 }, { $set: { age: 21 } })
 ```
     
 ### **Delete Queries**
@@ -234,12 +237,12 @@ db.users.updateOne({ age: 20 }, { $set: { age: 21 } })
 **deleteOne:** Delete the first document that matches the filter object.
     
 ```javascript
-db.users.deleteOne({ age: 20 })
+mongoose.collection.deleteOne({ age: 20 })
 ```
 **deleteMany:** Delete all documents that matches the filter object.
 
 ```javascript
-db.users.deleteMany({ age: 12 })
+mongoose.collection.deleteMany({ age: 12 })
 ```
     
 ### **Read Modifiers**
@@ -247,20 +250,19 @@ db.users.deleteMany({ age: 12 })
 **sort:** Sort the results of a find by the given fields.
     
 ```javascript
-db.users.find().sort({ name: 1, age: -1 })
+mongoose.collection.find().sort({ name: 1, age: -1 })
 
 ```
 **limit:** Only return a set number of documents.
 
 ```javascript
-db.users.find().limit(2)
+mongoose.collection.find().limit(2)
 ```
 
 **skip:** Skip a set number of documents from the beginning.
 
 ```javascript
-db.users.find().skip(4)
+mongoose.collection.find().skip(4)
 ```
 
-**[See More MongoDB Queries](https://mongoosejs.com/docs/api/query.html)**
-    
+**[See More MongoDB Commands](https://mongoosejs.com/docs/api/query.html)**
