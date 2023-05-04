@@ -169,6 +169,13 @@ For example, if a web application uses stateful authentication and is distribute
 
 ---
 
+## Monolithic Architecture:
+In a monolithic architecture, an application is built as a single, self-contained unit where all the different components of the application are tightly integrated and run on the same platform. This means that any changes to the application require the entire application to be rebuilt and redeployed. Monolithic applications can be easier to develop and deploy initially, but they can become more complex and difficult to maintain as they grow in size and complexity.
+
+## Microservices Architecture:
+In a microservices architecture, an application is broken down into smaller, independent services that communicate with each other through APIs. Each service is responsible for a specific task or function, and can be developed, deployed, and scaled independently of the others. This means that changes to one service don't require the entire application to be rebuilt and redeployed. Microservices can be more complex to develop and deploy initially, but they offer greater flexibility and scalability as the application grows and changes.
+
+
 # scenarios
 
 ## Stateless
@@ -186,3 +193,4 @@ For example, if a web application uses stateful authentication and is distribute
 - Imagine a banking application that needs to maintain session state for each client. In this scenario, stateful authentication can be beneficial as it allows the application to maintain a consistent view of the client's session across multiple requests. This allows the application to implement features such as transaction history and fraud detection by analyzing the user's behavior over time.
 
 - Consider an e-commerce application that requires users to maintain a persistent shopping cart across multiple sessions. Stateful authentication can be beneficial in this scenario as it allows the application to store the user's shopping cart information in a centralized session store, making it accessible across multiple devices and sessions. This allows the user to pick up where they left off regardless of which device they're using to access the application
+
