@@ -14,19 +14,23 @@
 
 ***HTTP protocol is stateless, which means that each message exchange between a client and a server is independent and self-contained. The server doesn't keep any information about previous requests or the client's state, so every request needs to contain all the necessary information. This ensures that the protocol is simple and scalable, but it also means that the server can't assume anything about the client's state or the previous requests it made.***
 
-## Exploring Authentication Methods in HTTP: Stateless vs Stateful:
-
-# Stateless
-***Stateless authentication involves sending authentication information (usually a token) with each request, and the server doesn't store any session information. This approach is simple and scalable because it doesn't require the server to maintain session information.***
-
-![](https://iq.opengenus.org/content/images/2020/03/token_auth.png)
+<br>
+<br>
 
 
-# StateFull:
+<!-- ## Exploring Authentication Methods in HTTP: Stateless vs Stateful: -->
 
-***Stateful authentication involves creating a session for the user when they log in, and the client sends a session ID with each subsequent request. The server uses the session ID to look up the user's session and determine if they are authenticated.***
+<!-- # Stateless
+***Stateless authentication involves sending authentication information (usually a token) with each request, and the server doesn't store any session information. This approach is simple and scalable because it doesn't require the server to maintain session information.*** -->
 
-![](https://iq.opengenus.org/content/images/2020/03/session_auth.png)
+<!-- ![](https://iq.opengenus.org/content/images/2020/03/token_auth.png) -->
+
+
+<!-- # StateFull:
+
+***Stateful authentication involves creating a session for the user when they log in, and the client sends a session ID with each subsequent request. The server uses the session ID to look up the user's session and determine if they are authenticated.*** -->
+
+<!-- ![](https://iq.opengenus.org/content/images/2020/03/session_auth.png) -->
 
 ---
 
