@@ -88,6 +88,13 @@ If the ATM is unable to complete the transaction correctly, the transaction will
 In general, ATM errors are handled similarly to any banking system error, and necessary measures are taken to ensure that the customer is not harmed and their funds are not lost.
 
 
+
+---
+## Transaction Workshop :
+
+[look at this link to get more info]("https://github.com/Farah202324/Transactions-workshop").
+
+---
 ## Our Team :
 Heleena Darwish.
 
