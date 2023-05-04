@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/remixicon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To-Do App</title>
+</head>
+
+<body >
+    <div class="container">
+        <section class="main-sec">
+            <h1 class="title">
+                To-Do App
+            </h1>
+            <section class="add-task-input">
+                <input type="text" placeholder="Add Task" id="task-input">
+                <button id="add-task">
+                    <span class="add">
+                        +
+                    </span>
+                </button>
+            </section>
+            <div class="clear">
+                <p>warning This button will delete all tasks</p>
+                <button id="clear">Clear All</button>
+            </div>
+            <section class="task-list" id="task-list">
+                <div class="task" style="display: none;">
+                    <p id="task-content"></p>
+                    <i class="ri-edit-2-fill edit-task" id="edit-task"></i>
+                    <i class="ri-delete-bin-6-fill delete-task" id="delete-task"></i>
+                    
+                </div>
+            </section>
+        </section>
+    </div>
+    <script type="module" src="js/main2.js"></script>
+</body>
+
+</html>
