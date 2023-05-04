@@ -28,6 +28,10 @@ After a user has been authenticated, authorization is the process of deciding wh
 OAuth (Open Authorization) is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords. This mechanism is used by companies such as Amazon, Google, Facebook, Microsoft, and Twitter to permit users to share information about their accounts with third-party applications or websites. 
 <hr/>
 
+>Imagine you have a toy box filled with all your favorite toys. You want to let your friend play with some of your toys, but you don't want to give them the key to your toy box. So instead, you ask your friend's mom to give them a special ticket that says they are allowed to play with your toys. When your friend comes over to play, they show you the ticket, and you let them play with the toys that are listed on the ticket.
+
+>OAuth works in a similar way for computer programs. When you use a website or app, you don't want to give them your password because that would let them access all your personal information. So instead, you can use OAuth to give the website or app a special "ticket" that lets them access only the specific parts of your information that you want them to. You can revoke the ticket at any time, just like you can take back the toys when your friend is done playing with them. This keeps your personal information safe and secure.
+
 [OAuth in detail](https://youtu.be/Lxg7NERDLD8)
 
 
