@@ -6,7 +6,7 @@
 
 # HTTP-VS-HTTPS
 
-![](./vedio/VID_31150419_021811_262.mp4)
+![](https://i.pinimg.com/564x/79/ff/43/79ff43ed2199dc3e436c13c7f79f5353.jpg)
 
 ## http
 
