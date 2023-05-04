@@ -42,7 +42,7 @@ Relationships are meaningful associations between tables that contain related in
     FirstName varchar(255),
     Age int,
     CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
-);
+    );
 
 
 ### Why is a Primary Key Important?🤓
