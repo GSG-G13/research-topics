@@ -26,6 +26,43 @@
 
 - A social media application with a large user base across multiple regions needs to handle a high volume of traffic. By using stateless authentication, the application can simplify its architecture and scale horizontally to handle the increased traffic without worrying about session state management. This allows the application to quickly respond to requests from any geographic region without the latency and coordination overhead of a centralized session store
 
+## code example :
+```
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+// create a session middleware with some options
+app.use(session({
+  secret: 'mysecret', // change this to a long, random string for production
+  resave: false,
+  saveUninitialized: true,
+}));
+
+// set session variables and display them on the webpage
+app.get('/', (req, res) => {
+  req.session.user_id = 121;
+  req.session.user_name = 'aghilanbaskar';
+
+  res.send(`
+    <html>
+      <body>
+        <p>Session variables are set.</p>
+        <p>username: ${req.session.user_name}</p>
+        <p>user ID: ${req.session.user_id}</p>
+      </body>
+    </html>
+  `);
+});
+
+// start the server
+app.listen(3000, () => {
+  console.log('Server started on http://localhost:3000');
+});
+
+```
+
 
 # StateFull:
 
@@ -39,6 +76,74 @@
 
 - Consider an e-commerce application that requires users to maintain a persistent shopping cart across multiple sessions. Stateful authentication can be beneficial in this scenario as it allows the application to store the user's shopping cart information in a centralized session store, making it accessible across multiple devices and sessions. This allows the user to pick up where they left off regardless of which device they're using to access the application
 
+```
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const crypto = require('crypto');
+
+const app = express();
+const port = 3000;
+
+app.use(cookieParser());
+
+app.get('/', (req, res) => {
+  const headers = {
+    alg: 'HS256',
+    typ: 'JWT'
+  };
+
+  const payload = {
+    user_id: 121,
+    user_name: 'aghilanbaskar'
+  };
+
+  const secret = '9a398ab636acf612n59d464f0e25c66ab17594b97c4d815d995a037e17bc685';
+
+  const jwt = generateJwt(headers, payload, secret);
+
+  res.cookie('access_token', jwt, { 
+    maxAge: 86400000, // 1 day
+    httpOnly: true,
+    sameSite: 'strict',
+    secure: true // enable for production, requires https
+  });
+
+  res.send(`JWT generated: ${jwt}. For verifying user, check the token in the further request by validating the token signature. Is valid token: ${isValidToken(jwt, secret)}.`);
+});
+
+function generateJwt(headers, payload, secret) {
+  const headerEncoded = Buffer.from(JSON.stringify(headers)).toString('base64').replace(/=+$/, '');
+  const payloadEncoded = Buffer.from(JSON.stringify(payload)).toString('base64').replace(/=+$/, '');
+
+  const signature = crypto.createHmac('sha256', secret)
+    .update(`${headerEncoded}.${payloadEncoded}`)
+    .digest('base64').replace(/=+$/, '');
+
+  const jwt = `${headerEncoded}.${payloadEncoded}.${signature}`;
+
+  return jwt;
+}
+
+function isValidToken(jwt, secret) {
+  const jwtArray = jwt.split('.');
+  const headerData = JSON.parse(Buffer.from(jwtArray[0], 'base64'));
+  const payloadData = JSON.parse(Buffer.from(jwtArray[1], 'base64'));
+
+  const header = JSON.stringify(headerData);
+  const payload = JSON.stringify(payloadData);
+
+  const signature = crypto.createHmac('sha256', secret)
+    .update(`${jwtArray[0]}.${jwtArray[1]}`)
+    .digest('base64').replace(/=+$/, '');
+
+  return jwtArray[2] === signature;
+}
+
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
+});
+
+```
 
 ---
 
