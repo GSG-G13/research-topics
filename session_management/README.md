@@ -61,7 +61,8 @@ app.use(sessions({
 * **cookie: { maxAge: 1000000000 } :** this sets the cookie expiry time. The browser will delete the cookie after the set duration elapses. The cookie will not be attached to any of the requests in the future. In this case, we’ve set the maxAge to a single day as computed by the following arithmetic.
 
 <hr>
-# Exercise
+
+# **Exercise:👇**
 
 * use express-session to manage a session in express. 
 
@@ -71,13 +72,13 @@ app.use(sessions({
 npm install express express-session cookie-parser
 ```
 * Import those modules:
-```
+```javaScript
 import express from ('express');
 import session from ('express-session');
-import cookieParser from ('cookie-parser);
+import cookieParser from ('cookie-parser');
 ```
 * after setting up the express server, use the cookie-parser and express-session middlewares to manage your session. 
-```
+```javaScript
 app.use(cooieParser());
 app.use(session({secret: "mysecret"}));
 ```
@@ -87,10 +88,10 @@ app.use(session({secret: "mysecret"}));
 
 <hr>
 
-# **Contributors:** 
+# **Contributors:🙋‍♂️** 
 
-[Abedulla Abo-Jazar](https://github.com/AbdallahAbujazar)
+[✔ Abedulla Abo-Jazar](https://github.com/AbdallahAbujazar)
 
-[Ahmed AbuMoghaseeb](https://github.com/AhmedMughessib)
+[✔ Ahmed AbuMoghaseeb](https://github.com/AhmedMughessib)
 
-[Mohammed Sbeata](https://github.com/Mohammed-Sbeata)
+[✔ Mohammed Sbeata](https://github.com/Mohammed-Sbeata)
