@@ -110,7 +110,7 @@ An optional company name []:
 
 **Step 2: Create https_server.js file & upload SSL files to Server directory**
 
-```
+```js
 const app = require("express")();
 const https = require("https");
 const fs = require("fs");
