@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #009DFA;
+    --secandry-color: #2ECC71;
+    --white-color: #FFF;
+    --deleting-color: #E74C3C;
+    --black-color: black;
+
+}
+
+body{
+    /* background:url(7292022_nuraghies_2_04.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .main-sec {
+    position: relative;
+    width: 400px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    padding: 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+    box-shadow: 2px 2px 4px var(--primary-color), -3px -3px 4px var(--primary-color),  -2px -2px 4px black;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 0px black ,  2px 2px 3px white;
+}
+
+.add-task-input {
+    margin: 25px 0;
+
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    border: 2px solid var(--secandry-color);
+    box-shadow: -1px -1px 2px var(--secandry-color), -2px -2px 10px white, 1px 1px 2px black, 2px 2px 10px white;
+    border-radius: 8px;
+
+
+}
+
+.add-task-input input {
+    background-color: transparent;
+    width: 80%;
+    height: 100%;
+    outline: none;
+    border: 0;
+    border-bottom: 1.5px solid var(--deleting-color);
+    /* color: var(--primary-color); */
+    padding-top: 15px;
+
+}
+
+.add-task-input button {
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 30px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--white-color);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.task {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: #2ecc7170;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1.5px solid var(--primary-color);
+
+}
+/* 
+.task button {
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 30px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--white-color);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+} */
+
+
+.task i {
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 30px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--white-color);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+p {
+    width: 70%;
+    min-height: 30px;
+    background-color: #ffc3c3;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #009DFA;
+    font-size: 20px;
+    
+}
+
+.task-list {
+    width: 95%;
+
+
+}
+
+
+
+.task i.delete-task {
+    background-color: var(--deleting-color);
+
+}
+
+
+.edit-Content{
+    outline: none;
+    border: 0;
+    width: 70%;
+    min-height: 30px;
+    background-color: #ffc3c3;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #009DFA;
+    font-size: 20px;
+}
+.task .save-Btn{
+    width: 22%;
+    background-color: var(--primary-color);
+    height: 30px;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+}
+.clear{
+    width: 95%;
+    /* background-color: green; */
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+.clear p {
+    width: 70%;
+    background-color: transparent;
+    color: var(--deleting-color);
+    font-size:15px ;
+    border-bottom: 1.5px solid var(--deleting-color) ;
+}
+#clear{
+    padding: 15px 25px;
+    display: flex;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    align-items: center;
+    height: 20px;
+    background-color:var(--deleting-color);
+    
+}
+
+@media screen and (max-width: 400px){
+    .main-sec{
+        max-width: 350px;
+        
+    }
+    .clear p{
+        font-size:10px ;
+    }
+
+}
