@@ -33,4 +33,25 @@ OAuth (Open Authorization) is an open standard for access delegation, commonly u
 
 
 - OAuth and APIs, How OAuth Is Used to Access APIs?
-- OAuth 1.0 vs. OAuth 2.0
+
+## OAuth 1.0 vs. OAuth 2.0
+
+### Here are the main key differences between OAuth 1.0 and OAuth 2.0:
+
+| Feature             | OAuth 1.0                                                                                                                         | OAuth 2.0                                                                                                              |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Security            | Less secure, because it uses digital signatures for authentication and message integrity, which can be more complex to implement. | More secure than OAuth 1.0, because it uses SSL/TLS encryption to protect communication between the client and server. |
+| Simplicity          | More complex to implement due to the use of one-time-use tokens and more complex authentication.                                  | Simpler to implement and use, with separate specifications for authentication, authorization, and token handling.      |
+| Token format        | Uses one-time-use tokens, which can be more secure but also more complex to implement.                                            | Uses longer-lived access tokens, which can simplify implementation but may be less secure if not properly managed.     |
+| Resource protection | Fewer options for resource protection.                                                                                            | Provides more options for protecting resources and APIs, including the use of scopes and resource owners.              |
+| Client registration | Does not have a formal client registration process.                                                                               | Requires clients to register with the authorization server, which can help with security and management.               |
+
+### Here how they actually work:
+
+#### OAuth 1.0:
+
+<img src = "https://camo.githubusercontent.com/5188c068edbeb4117fbfde67f3ceb4bff4f6303775a317223d2c3232ff6f27a0/68747470733a2f2f692e696d6775722e636f6d2f4f7a754e7556732e706e67" alt = "OAuth 1.0">
+
+#### OAuth 2.0:
+
+<img src = "https://camo.githubusercontent.com/2363737e1d54584c4161af42fb7c7ff6362fa14324c01372d6ab014a799e1308/68747470733a2f2f692e696d6775722e636f6d2f48365776626d632e706e67" alt = "OAuth 2.0">
