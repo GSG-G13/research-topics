@@ -29,3 +29,32 @@ Relationships are meaningful associations between tables that contain related in
 - One-to-many
 
   ![One-to-many](./images/one-to-many.gif)
+
+  
+  ### Primary Key 🔑
+
+  ### What is a Primary Key?👀
+  At its most basic level, a primary key is a special column or combination of columns in a relational database table that is designated to uniquely identify each record within the table. This means that each record within the table must have a unique primary key value.
+  ```sql
+  CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
+);```
+
+
+### Why is a Primary Key Important?🤓
+- It allows for quick and efficient data retrieval within the table. When you query the table using the primary key, the database can quickly locate the record associated with that key, without having to search through the entire table.
+
+- The primary key ensures that each record within the table is unique. This is important for data integrity, as it prevents duplicate records from being created within the table.
+
+- The primary key is often used in conjunction with foreign keys to establish relationships between tables. This allows for complex queries and data analysis to be performed across multiple tables within the database.
+
+### Conclusion
+The primary key is a critical concept in the design and implementation of relational databases. It serves as a unique identifier for each record within a table, and allows for quick and efficient data retrieval and analysis. By understanding the importance of primary keys, you can ensure that your relational database functions effectively and efficiently.
+
+- PK & FK in relations
+
+ ![PK & FK in relations](./images/postssql.png)
