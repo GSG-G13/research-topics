@@ -103,6 +103,7 @@ const Post = sequelize.define('post', {
 })
 
 Post.belongsTo(User, { foreignKey: 'userId', targetKey: 'id' })
+User.hasMany(Post, { foreignKey: 'userId', targetKey: 'id' })
 
 sequelize
   .sync() // Pass { force: true } to drop existing tables and recreate them
@@ -145,7 +146,7 @@ User.findAll({
 
 ## Operations on query:
 ```js
-const Op = require('sequelize')
+const { Op } = require('sequelize')
 
 // Inside Where
 [Op.eq]: 3
