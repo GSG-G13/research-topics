@@ -40,8 +40,53 @@
 - Consider an e-commerce application that requires users to maintain a persistent shopping cart across multiple sessions. Stateful authentication can be beneficial in this scenario as it allows the application to store the user's shopping cart information in a centralized session store, making it accessible across multiple devices and sessions. This allows the user to pick up where they left off regardless of which device they're using to access the application
 
 
-// last section in workshop
+---
 
+# Stateful Authentication
+
+##### Stateful authentication is a type of authentication mechanism where the server stores some information about the user's session or authentication state, such as a session ID or a token, to validate subsequent requests. Here are some advantages and disadvantages of using stateful authentication:
+
+### How it works
+Stateful session is created on the backend side, and the corespondent session reference Id is sent to the client. Each time the client makes a request to the server, the server locates the session memory using the reference Id from the client and finds the authentication information.
+
+In this model, you can easily imagine that if the session memory is deleted on the backend side, then the session reference Id, which the client is holding, is completely meaningless.
+
+![alt text](https://miro.medium.com/v2/resize:fit:640/format:webp/1*B6NRLiXwOn64YSnfpKuQjw.png)
+
+## Pros:
+
+1. **More secure:** Stateful authentication can be more secure than stateless authentication because the server maintains information about the user's session. This allows the server to revoke access if needed and track user activity more easily.
+
+For example, if a user logs into a banking application using stateful authentication, the server can store information about the user's session and track their activity. If the user tries to access a resource they are not authorized to access or if their session becomes compromised, the server can revoke their access or take other actions to protect their account.
+
+2. **Better control:** With stateful authentication, the server has more control over user access to resources because it can manage session states and authentication tokens. This can be useful for enforcing policies and preventing unauthorized access.
+
+
+For example, a social networking site might use stateful authentication to manage user access to their profile and personal information. The server could use session states to control which users can access which profiles, and authentication tokens to ensure that only authorized users can access sensitive information.
+
+3. **More complex operations:** Stateful authentication can allow for more complex operations, such as personalized experiences for users and storing user data, because the server has access to more information about the user's session.
+
+For example, an e-commerce site might use stateful authentication to provide personalized recommendations to users based on their previous purchases. The server could use information from the user's session to suggest products they might be interested in, or to show them personalized discounts and promotions.
+
+## Cons:
+
+1. **Higher resource usage:** Stateful authentication requires the server to manage and maintain session states, which can increase resource usage and decrease scalability.
+
+For example, if a large number of users are accessing a web application that uses stateful authentication, the server may need to maintain a lot of session state information. This can increase resource usage and make the application less scalable.
+
+2. **Longer response times:** Because stateful authentication requires the server to look up session information for every request, it can result in longer response times compared to stateless authentication.
+
+For example, if a user is accessing a web application that uses stateful authentication, the server may need to look up their session information for each request they make. This can result in longer response times compared to stateless authentication, where the server does not need to look up session information for each request.
+
+
+3. **Increased complexity:** Stateful authentication can be more complex to implement and maintain, especially in distributed environments. This can lead to more errors and security vulnerabilities.
+
+For example, if a web application uses stateful authentication and is distributed across multiple servers, managing session state information can become more complex. Additionally, if there are errors in the implementation of stateful authentication, this can lead to security vulnerabilities such as session hijacking or replay attacks.
+
+##### In summary, stateful authentication can provide better security and control over user access to resources, but it comes at the cost of higher resource usage, longer response times, and increased complexity. It's important to consider the specific needs of your application and user base when deciding whether to use stateful or stateless authentication.
+
+
+---
 # Hybrid Approaches to Authentication: Combining the Benefits of Stateless and Stateful Authentication:
 
 ***Stateful authentication and stateless authentication have their respective strengths and weaknesses. Stateful authentication is known for its higher level of security, as it can track user sessions and prevent unauthorized access. On the other hand, stateless authentication is faster and more scalable, making it well-suited for handling individual requests. A hybrid approach that combines both techniques can deliver the best of both worlds, providing strong security while also accommodating scalability and speed.***
