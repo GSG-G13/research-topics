@@ -29,6 +29,10 @@ Relationships are meaningful associations between tables that contain related in
 - One-to-many
 
   ![One-to-many](./images/one-to-many.gif)
+  
+- Many-to-many
+
+  A many-to-many relationship indicates that multiple records in a table are linked to multiple records in another table.
 
   
   ### Primary Key 🔑
