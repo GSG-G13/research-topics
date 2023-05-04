@@ -121,9 +121,28 @@ CSRF attacks are a type of attack where an attacker sends a request from a victi
 
 <br>
 
+####  Short example of how sql injection can be implemented
+
+Suppose there is a website that has a search page where users can search for products by name. The website uses the following SQL query to retrieve the products:
+```
+SELECT * FROM products WHERE name = 'search_term'
+```
+
+An attacker can use SQL injection to retrieve all products from the database by entering the following string in the search field:
+```
+' OR 1=1 --
+```
+
+This will result in the following SQL query being executed:
+```
+SELECT * FROM products WHERE name = '' OR 1=1 --'
+```
+
+The double hyphen at the end of the query is used to comment out the rest of the original query. The resulting query will return all rows from the products table because 1=1 is always true. So how to prevent this from happening?
+
 **Defending Against SQL injections**
 
-- Use of parameterized Queries
+- Make use of parameterized Queries
 - Allow-list Input Validation
 
 <br>
